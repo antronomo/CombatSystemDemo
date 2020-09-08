@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://icon.png" type="Texture" id=1]
+[ext_resource path="res://Attack.gd" type="Script" id=2]
+
+[node name="button" type="Node"]
+script = ExtResource( 2 )
+
+[node name="b_attack" type="Button" parent="."]
+margin_right = 80.0
+margin_bottom = 80.0
+icon = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="b_attack"]
+modulate = Color( 0, 0, 0, 1 )
+self_modulate = Color( 0, 0, 0, 1 )
+margin_right = 83.0
+margin_bottom = 40.0
+text = "ATTACK"
+align = 1
+valign = 1
+[connection signal="pressed" from="b_attack" to="." method="_on_b_attack_pressed"]
