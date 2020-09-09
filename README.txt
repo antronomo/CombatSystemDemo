@@ -6,3 +6,11 @@ sry for bad english, i recently discover that can be done whit less line and i'l
 i acept criticism
 
 hope u have a nice day, and i took time to upload those files due to github problems
+
+**********************HOW TO USE THIS BUTTON***********************************
+First open it as a godot project
+select to open the button scene
+pres F6
+clic the godot icon and loock at the debugger output
+
+if u select button from the button scene, u can change all stats while running the project
