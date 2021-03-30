@@ -1,4 +1,4 @@
 extends Node
 
-class character:
+func damage_calculation():
     pass
