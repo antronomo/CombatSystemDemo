@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://GDscrips/Player.gd" type="Script" id=1]
+[ext_resource path="res://icon.png" type="Texture" id=2]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 2 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 28.0578, 28.216 )
+
+[node name="Player" type="Node2D"]
+script = ExtResource( 1 )
+char_name = "none"
+
+[node name="PlayerBody" type="KinematicBody2D" parent="."]
+
+[node name="PlayerSprite" type="AnimatedSprite" parent="PlayerBody"]
+modulate = Color( 0, 0.988235, 0.0862745, 1 )
+self_modulate = Color( 0.0784314, 1, 0, 1 )
+frames = SubResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerBody"]
+shape = SubResource( 2 )
