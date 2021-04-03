@@ -1,19 +1,23 @@
-extends Node2D
+extends "res://GDscrips/EntityBase.gd"
 
-export var char_name: String = 'player'
-export var heal_points: int = 1000
-export var attack: float = 50
-export var defense: float = 50
-export var crit_chance: int = 15
-export var crit_damage: int = 100
+func get_input(vel, spd) -> Vector2:
+	var velocity: Vector2 = vel
 
-func die():
-	queue_free()
+	if Input.is_action_pressed('ui_right'):
+		velocity.x += 10
+	if Input.is_action_pressed('ui_left'):
+		velocity.x -= 10
+	if Input.is_action_pressed('ui_up'):
+		velocity.y -= 10
+	if Input.is_action_pressed('ui_down'):
+		velocity.y += 10
+
+	velocity = velocity.normalized() * spd
+
+	return velocity
 
 func _ready():
-	pass # Replace with function body.
+	print('ready')
 
-func _process(delta):
-
-	if heal_points <= 0:
-		die()
+func _physics_process(delta):
+	move_and_slide(get_input(vel, spd) * delta)
