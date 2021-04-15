@@ -16,8 +16,12 @@ func get_input(vel, spd) -> Vector2:
 
 	return velocity
 
-func _ready():
-	print('ready')
+func _unhandled_input(event) -> void:
+	if event.is_action_pressed('ui_clic_iz'):
+		hit_box.attack()
 
-func _physics_process(delta):
-	move_and_slide(get_input(vel, spd) * delta)
+func _ready():
+	pass
+
+func _physics_process(_delta):
+	move_and_slide(get_input(vel, spd) * _delta)

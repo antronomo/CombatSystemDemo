@@ -1,11 +1,16 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://GDscrips/EntityBase.gd" type="Script" id=1]
+[ext_resource path="res://Resources/Boxes/HitBox.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Resources/Boxes/HurtBox.tscn" type="PackedScene" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 
 [node name="KinematicBody2D" type="KinematicBody2D"]
 script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="Sprite" type="Sprite" parent="."]
 
@@ -13,3 +18,13 @@ script = ExtResource( 1 )
 shape = SubResource( 1 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+
+[node name="HurtBox" parent="." instance=ExtResource( 3 )]
+
+[node name="HitBox" parent="." instance=ExtResource( 2 )]
+
+[editable path="HurtBox"]
+
+[editable path="HitBox"]
