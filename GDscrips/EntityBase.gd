@@ -1,5 +1,6 @@
 extends KinematicBody2D
 
+#Variantes basicas para los personajes
 export var char_name: String = 'default'
 export var max_hp: int = 1000
 export var hp: float = 1
@@ -24,7 +25,7 @@ func dye():
 func handle_hit():
 	print(name + ' has been hit!')
 
-
+#Calculador de daño, debería moverlo a otro archivo, quizás para poder mejorarlo ya que quiero hacerlo más complejo
 func damage_calculator(x_atk: float, y_deff: float, x_crit_cnace: float, x_crit_dmg: int) -> float:
 	var _damage: float
 	var _lucky: float = randi()%(26 + 75) * 100
@@ -46,8 +47,11 @@ func damage_calculator(x_atk: float, y_deff: float, x_crit_cnace: float, x_crit_
 
 
 func _ready() -> void:
+	
+	#Todos los personajes tienen la vida al máximo cuando son cargados
 	self.hp = self.max_hp
 
+	#Llamada a la consola para verificar que han sido cargado satisfactoriamente
 	print(self.char_name +' is ready!')
 
 

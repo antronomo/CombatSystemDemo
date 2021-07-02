@@ -1,0 +1,9 @@
+- quiero probar si es posible crear EL calculo una vez cargado un mapa con sus enemigos y 
+reutilizarlo hasta finalizar o cargar otro mapa.
+-movimiento mas realista: quiero que cuando se deje de mover (jugador o npc), que la velocidad disminuya 
+gradualmente hasta llegar a 0, varia principalmente de que tan rapido se movia el personaje, vuela o no y 
+el terreno donde se encuentre.
+-menu customizable de personaje, todos empiezan de la misma base, pero una vez creado, empiecen con constantes, 
+como el nombre
+-cliamas variantes: vientos que soplen o no, que lo hagan desde una direccion distinta pero constante, igual
+que las precipitaciones, nieve, arena...

@@ -15,6 +15,13 @@ tile_data = PoolIntArray( -720892, 5, 0, -720891, 5, 0, -720890, 5, 0, -720889, 
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
 position = Vector2( 74.0881, 93.3237 )
+max_hp = 1000
+hp = 1.0
+atk = 100.0
+deff = 100.0
+crit_chance = 15.0
+crit_dmg = 150
+vel = Vector2( 0, 0 )
 
 [node name="Skeleton" parent="." instance=ExtResource( 3 )]
 position = Vector2( 200.801, 100.036 )
